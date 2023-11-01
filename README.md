@@ -10,7 +10,7 @@
     </a>
 </p>
 
-## What this does?
+## What does this do?
 
 Nothing. The app does absolutely nothing while running. 0% CPU all day long.
 
