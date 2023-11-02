@@ -10,6 +10,12 @@
     </a>
 </p>
 
+## Installation
+
+- Download, unzip, move to `/Applications`
+- or.. `brew install music-decoy`
+
+
 ## What does this do?
 
 Nothing. The app does absolutely nothing while running. 0% CPU all day long.
