@@ -52,3 +52,20 @@ Based on [this StackExchange answer](https://apple.stackexchange.com/questions/3
 - [noTunes](https://github.com/tombonez/noTunes) which listens for launched apps and kills Music as soon as it is launched
     - Problem: *it does use a tiny bit of CPU in the background* although checking for launched apps is very little work
     - Advantage: *it can launch a custom app on Play* which this app can't do
+
+## *Frequently* asked questions?
+
+I think they were only asked once, and they might not even be questions but I might as well record the info for posterity.
+
+### VLC crashes
+
+Looks like VLC tries to use [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge) to send commands to the Music app.
+
+```sh
+warning: failed to get scripting definition from /Applications/Music Decoy.app; it may not be scriptable.
+-[SBApplication playerState]: unrecognized selector sent to instance 0x600003399050
+```
+
+You can fix this by configuring the following setting:
+
+![vlc setting for music decoy](https://files.lowtechguys.com/vlc-music-decoy-setting.png)
