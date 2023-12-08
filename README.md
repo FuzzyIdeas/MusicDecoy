@@ -72,7 +72,7 @@ You can fix this by configuring the following setting:
 
 ### How do I launch Music?
 
-You can use this macOS Shortcut: [Music.shortcut](Assets/Music.shortcut)
+You can use this macOS Shortcut: [Music.shortcut](https://github.com/FuzzyIdeas/MusicDecoy/raw/main/Assets/Music.shortcut)
 
 It will quit Music Decoy and launch the Music app, with a small delay between the two actions.
 
