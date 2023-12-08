@@ -69,3 +69,13 @@ warning: failed to get scripting definition from /Applications/Music Decoy.app; 
 You can fix this by configuring the following setting:
 
 ![vlc setting for music decoy](https://files.lowtechguys.com/vlc-music-decoy-setting.png)
+
+### How do I launch Music?
+
+You can use this macOS Shortcut: [Music.shortcut](Assets/Music.shortcut)
+
+It will quit Music Decoy and launch the Music app, with a small delay between the two actions.
+
+You can add it to your Dock for easy access:
+
+![add to dock option](Assets/add-to-dock.png)
