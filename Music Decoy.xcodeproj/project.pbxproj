@@ -12,6 +12,7 @@
 		C74B66BD2AF1661100F8A72D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74B66BB2AF1661100F8A72D /* MainMenu.xib */; };
 		C74B66BF2AF1661100F8A72D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C74B66BE2AF1661100F8A72D /* main.m */; };
 		C74B66C82AF1728200F8A72D /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */; };
+		CCF04AEC2C81341600D21159 /* MediaPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF04AEA2C812E2A00D21159 /* MediaPlayerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		C74B66BE2AF1661100F8A72D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		C74B66C72AF1728200F8A72D /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		CCF04AE92C812D5D00D21159 /* MediaPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaPlayerController.h; sourceTree = "<group>"; };
+		CCF04AEA2C812E2A00D21159 /* MediaPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +58,7 @@
 		C74B66B52AF1661000F8A72D /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				C74B66C72AF1728200F8A72D /* LaunchAtLoginController.h */,
-				C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */,
+				CCF04AE82C812D3C00D21159 /* Controllers */,
 				C74B66B62AF1661000F8A72D /* AppDelegate.h */,
 				C74B66B72AF1661000F8A72D /* AppDelegate.m */,
 				C74B66B92AF1661100F8A72D /* Assets.xcassets */,
@@ -64,6 +66,17 @@
 				C74B66BE2AF1661100F8A72D /* main.m */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		CCF04AE82C812D3C00D21159 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C74B66C72AF1728200F8A72D /* LaunchAtLoginController.h */,
+				C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */,
+				CCF04AE92C812D5D00D21159 /* MediaPlayerController.h */,
+				CCF04AEA2C812E2A00D21159 /* MediaPlayerController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF04AEC2C81341600D21159 /* MediaPlayerController.m in Sources */,
 				C74B66C82AF1728200F8A72D /* LaunchAtLoginController.m in Sources */,
 				C74B66BF2AF1661100F8A72D /* main.m in Sources */,
 				C74B66B82AF1661000F8A72D /* AppDelegate.m in Sources */,
@@ -274,10 +288,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RDDXV84A73;
+				DEVELOPMENT_TEAM = 2UBRYB2VPL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Music Decoy";
@@ -301,10 +316,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RDDXV84A73;
+				DEVELOPMENT_TEAM = 2UBRYB2VPL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Music Decoy";

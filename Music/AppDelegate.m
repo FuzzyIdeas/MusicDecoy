@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "LaunchAtLoginController.h"
+#import "MediaPlayerController.h"
 
 @interface AppDelegate ()
 @end
@@ -16,6 +17,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
     [launchController setLaunchAtLogin:YES];
+}
+
+- (void)applicationWillBecomeActive:(NSNotification *)notification {
+    MediaPlayerController *mediaPlayerController = [[MediaPlayerController alloc] init];
+    [mediaPlayerController launchMediaPlayer];
 }
 
 @end
