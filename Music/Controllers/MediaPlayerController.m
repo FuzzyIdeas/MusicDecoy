@@ -12,7 +12,12 @@
 @implementation MediaPlayerController
 
 - (void)launchMediaPlayer {
-    NSString *bundleIdentifier = @"com.colliderli.IINA";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *config = [defaults objectForKey:@"appConfiguration"];
+    NSString *bundleIdentifier = config[@"mediaPlayerBundleID"];
+    NSString *appPath = config[@"mediaPlayerAppPath"];
+    
     NSArray<NSRunningApplication *> *runningApps = [[NSWorkspace sharedWorkspace] runningApplications];
     NSRunningApplication *mediaApp = nil;
     
@@ -23,13 +28,9 @@
         }
     }
     
-    if (mediaApp) {
-        [mediaApp activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-    } else {
-        NSString *appPath = @"/Applications/IINA.app";
-        [[NSWorkspace sharedWorkspace] openFile:appPath withApplication:@"IINA"];
-    }
+    mediaApp ? [mediaApp activateWithOptions:NSApplicationActivateIgnoringOtherApps]
+             : [[NSWorkspace sharedWorkspace] openFile:appPath];
 }
 
-@end
 
+@end

@@ -2,21 +2,26 @@
 //  AppDelegate.m
 //  Music
 //
-//  Created by Alin Panaitiu on 31.10.2023.
+//  Created by Francisco Montaldo on 29.08.2024.
 //
 
 #import "AppDelegate.h"
 #import "LaunchAtLoginController.h"
 #import "MediaPlayerController.h"
-
-@interface AppDelegate ()
-@end
+#import "ConfigurationController.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
     [launchController setLaunchAtLogin:YES];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *config = [defaults objectForKey:@"appConfiguration"];
+    if (!config) {
+        ConfigurationController *configurationController = [[ConfigurationController alloc] init];
+        [configurationController openConfigWindow];
+    }
 }
 
 - (void)applicationWillBecomeActive:(NSNotification *)notification {
