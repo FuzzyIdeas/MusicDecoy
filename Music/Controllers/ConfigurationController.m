@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "ConfigurationController.h"
 #import "OpenPanelAccessoryView.h"
+#import "LaunchAtLoginController.h"
 
 @implementation ConfigurationController {
     NSString *bundleID;
@@ -26,6 +27,7 @@
     [openPanel setCanSelectHiddenExtension:YES];
     [openPanel setAllowedFileTypes:@[@"app"]];
     
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     
     [openPanel beginWithCompletionHandler:^(NSModalResponse result) {
         NSURL *selectedFileURL = (result == NSModalResponseOK) ? [[openPanel URLs] firstObject] : nil;
@@ -50,6 +52,8 @@
         };
         [defaults setObject:config forKey:@"appConfiguration"];
         [defaults synchronize];
+        LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
+        [launchController setLaunchAtLogin:YES];
     } else {
         [self cancelConfiguration];
     }
