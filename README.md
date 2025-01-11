@@ -43,6 +43,22 @@ The app has no Dock icon and no menubar icon so to quit it you'd need to do *one
 - Launch **Activity Monitor**, find **Music Decoy** and press the ❌ button at the top
 - Run the following command in the Terminal: `killall 'Music Decoy'`
 
+## Configuration
+
+Since v1.1 you can configure Music Decoy to launch another app when the **▷ Play** button is pressed.
+
+To do that, run the following command in the Terminal *(example for Spotify)*:
+
+```sh
+defaults write com.apple.MusicDecoy mediaAppPath /Applications/Spotify.app
+```
+
+To reset the configuration, run:
+
+```sh
+defaults delete com.apple.MusicDecoy mediaAppPath
+```
+
 ## Alternatives
 
 Based on [this StackExchange answer](https://apple.stackexchange.com/questions/372948/how-can-i-prevent-music-app-from-starting-automatically-randomly), there are a few different ways to achieve the same effect:
@@ -51,7 +67,6 @@ Based on [this StackExchange answer](https://apple.stackexchange.com/questions/3
     - Problem: *disables the Play button completely*
 - [noTunes](https://github.com/tombonez/noTunes) which listens for launched apps and kills Music as soon as it is launched
     - Problem: *it does use a tiny bit of CPU in the background* although checking for launched apps is very little work
-    - Advantage: *it can launch a custom app on Play* which this app can't do
 
 ## *Frequently* asked questions?
 
