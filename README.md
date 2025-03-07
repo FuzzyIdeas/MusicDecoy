@@ -50,13 +50,13 @@ Since v1.1 you can configure Music Decoy to launch another app when the **▷ Pl
 To do that, run the following command in the Terminal *(example for Spotify)*:
 
 ```sh
-defaults write com.apple.MusicDecoy mediaAppPath /Applications/Spotify.app
+defaults write com.lowtechguys.MusicDecoy mediaAppPath /Applications/Spotify.app
 ```
 
 To reset the configuration, run:
 
 ```sh
-defaults delete com.apple.MusicDecoy mediaAppPath
+defaults delete com.lowtechguys.MusicDecoy mediaAppPath
 ```
 
 ## Alternatives
