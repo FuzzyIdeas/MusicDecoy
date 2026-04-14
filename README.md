@@ -13,7 +13,7 @@
 ## Installation
 
 - Download, unzip, move to `/Applications`
-- or.. `brew install music-decoy`
+- or.. `brew install --cask music-decoy`
 
 
 ## What does this do?
