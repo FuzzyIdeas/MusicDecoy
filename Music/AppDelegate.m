@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "LaunchAtLoginController.h"
+#import "MusicDecoyApplication.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) NSUserDefaults *defaults;
@@ -22,6 +23,15 @@
     self.defaults = [[NSUserDefaults alloc] initWithSuiteName:@"com.lowtechguys.MusicDecoy"];
     [self.defaults addObserver:self forKeyPath:@"mediaAppPath" options:0 context:NULL];
     [self updateActivationPolicy];
+
+    [[NSAppleEventManager sharedAppleEventManager] setEventHandler:NSApp
+                                                      andSelector:@selector(handlePlayPauseAppleEvent:withReplyEvent:)
+                                                    forEventClass:'hook'
+                                                       andEventID:'PlPs'];
+    [[NSAppleEventManager sharedAppleEventManager] setEventHandler:NSApp
+                                                      andSelector:@selector(handlePlayPauseAppleEvent:withReplyEvent:)
+                                                    forEventClass:'hook'
+                                                       andEventID:'Play'];
 }
 
 - (void)updateActivationPolicy {
@@ -43,18 +53,7 @@
 - (void)applicationDidBecomeActive:(NSNotification *)notification {
     // LSBackgroundOnly means no launch activation, so this only fires while we're
     // Accessory, i.e. mediaAppPath is set and Play was pressed.
-    NSString *appPath = [self.defaults stringForKey:@"mediaAppPath"];
-    if (!appPath) {
-        return;
-    }
-
-    NSString *bundleIdentifier = [[NSBundle bundleWithPath:appPath] bundleIdentifier];
-    NSArray<NSRunningApplication *> *running = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleIdentifier];
-    if (running.count) {
-        [running.firstObject activateWithOptions:0]; // already running: bring it forward
-    } else {
-        [[NSWorkspace sharedWorkspace] launchApplication:appPath]; // launch it
-    }
+    [(MusicDecoyApplication *)NSApp launchConfiguredMediaApp];
 }
 
 @end
