@@ -12,6 +12,8 @@
 		C74B66BD2AF1661100F8A72D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74B66BB2AF1661100F8A72D /* MainMenu.xib */; };
 		C74B66BF2AF1661100F8A72D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C74B66BE2AF1661100F8A72D /* main.m */; };
 		C74B66C82AF1728200F8A72D /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */; };
+		C74B66D12AF1800000F8A72D /* MusicDecoyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = C74B66D02AF1800000F8A72D /* MusicDecoyApplication.m */; };
+		C74B66D42AF1800000F8A72D /* MusicDecoy.sdef in Resources */ = {isa = PBXBuildFile; fileRef = C74B66D32AF1800000F8A72D /* MusicDecoy.sdef */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		C74B66BE2AF1661100F8A72D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		C74B66C72AF1728200F8A72D /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		C74B66CE2AF1800000F8A72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C74B66CF2AF1800000F8A72D /* MusicDecoyApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicDecoyApplication.h; sourceTree = "<group>"; };
+		C74B66D02AF1800000F8A72D /* MusicDecoyApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicDecoyApplication.m; sourceTree = "<group>"; };
+		C74B66D32AF1800000F8A72D /* MusicDecoy.sdef */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MusicDecoy.sdef; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,12 @@
 			children = (
 				C74B66C72AF1728200F8A72D /* LaunchAtLoginController.h */,
 				C74B66C62AF1728200F8A72D /* LaunchAtLoginController.m */,
+				C74B66CE2AF1800000F8A72D /* Info.plist */,
+				C74B66CF2AF1800000F8A72D /* MusicDecoyApplication.h */,
+				C74B66D02AF1800000F8A72D /* MusicDecoyApplication.m */,
 				C74B66B62AF1661000F8A72D /* AppDelegate.h */,
 				C74B66B72AF1661000F8A72D /* AppDelegate.m */,
+				C74B66D32AF1800000F8A72D /* MusicDecoy.sdef */,
 				C74B66B92AF1661100F8A72D /* Assets.xcassets */,
 				C74B66BB2AF1661100F8A72D /* MainMenu.xib */,
 				C74B66BE2AF1661100F8A72D /* main.m */,
@@ -124,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74B66BA2AF1661100F8A72D /* Assets.xcassets in Resources */,
+				C74B66D42AF1800000F8A72D /* MusicDecoy.sdef in Resources */,
 				C74B66BD2AF1661100F8A72D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74B66C82AF1728200F8A72D /* LaunchAtLoginController.m in Sources */,
+				C74B66D12AF1800000F8A72D /* MusicDecoyApplication.m in Sources */,
 				C74B66BF2AF1661100F8A72D /* main.m in Sources */,
 				C74B66B82AF1661000F8A72D /* AppDelegate.m in Sources */,
 			);
@@ -279,13 +291,8 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = RDDXV84A73;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Music Decoy";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_LSBackgroundOnly = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Music/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -307,13 +314,8 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = RDDXV84A73;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Music Decoy";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_LSBackgroundOnly = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Music/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="Music Decoy Terminology">
+    <suite name="Music Suite" code="hook" description="Compatibility terms for media apps that script Apple Music">
+        <command name="pause" code="hookPaus" description="No-op pause command">
+            <cocoa method="pause:"/>
+        </command>
+        <command name="playpause" code="hookPlPs" description="No-op play/pause command">
+            <cocoa method="playpause:"/>
+        </command>
+        <command name="resume" code="hookResu" description="No-op resume command">
+            <cocoa method="resume:"/>
+        </command>
+        <command name="stop" code="hookStop" description="No-op stop command">
+            <cocoa method="stop:"/>
+        </command>
+        <class name="application" code="capp" description="The application program">
+            <cocoa class="MusicDecoyApplication"/>
+            <property name="player state" code="pPlS" type="ePlS" access="r" description="Always stopped">
+                <cocoa key="playerState"/>
+            </property>
+        </class>
+        <enumeration name="ePlS" code="ePlS">
+            <enumerator name="stopped" code="kPSS"/>
+            <enumerator name="playing" code="kPSP"/>
+            <enumerator name="paused" code="kPSp"/>
+            <enumerator name="fast forwarding" code="kPSF"/>
+            <enumerator name="rewinding" code="kPSR"/>
+        </enumeration>
+    </suite>
+</dictionary>
