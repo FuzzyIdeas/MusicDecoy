@@ -47,7 +47,13 @@ The app has no Dock icon and no menubar icon so to quit it you'd need to do *one
 
 Since v1.1 you can configure Music Decoy to launch another app when the **▷ Play** button is pressed.
 
-To do that, run the following command in the Terminal *(example for Spotify)*:
+### GUI (recommended)
+
+1. Make sure Music Decoy is already running
+2. Open **Music Decoy** again (double-click the app in Finder, or launch it from Spotlight)
+3. In the panel that appears, click **Choose App…** (e.g. Spotify), or **Clear** to go back to block-only mode
+
+### Terminal
 
 ```sh
 defaults write com.lowtechguys.MusicDecoy mediaAppPath /Applications/Spotify.app
